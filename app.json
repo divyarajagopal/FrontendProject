@@ -3,6 +3,15 @@
     "name": "FrontendProject",
     "slug": "FrontendProject",
     "version": "1.0.0",
+    "ios" : {
+      "infoPlist": {
+        "NSAppTransportSecurity": true
+      }
+    },
+     
+
+      
+    
     "assetBundlePatterns": [
       "**/*"
     ]
