@@ -8,41 +8,9 @@ import { Bitcoin, Ether, Rippel, Link } from "../Assets/Assets";
 
 const HomeUI = ({ navigation }: { navigation: any }) => {
 
-  // Note - Ideally api must be dynamically built by filtering from "Trading Api".
-  // Was able to call the products api and filter for the 4 crypto,
-  // But not able to fetch the ids from the returning array. Code is below
+  
 
-  //Trading API call for products
-
-  //const url = "https://api.exchange.coinjar.com/products";
-  // const [productsData, setproductsData] = useState<any[]>([]);
-  // const getProductsApi = () => {
-
-  //     fetch(url,{
-  //       method: 'GET',
-  //       headers: {
-  //           'Content-Type': 'application/json',
-  //           'Authorization': 'Token token="iKUU9fvWtmuc0OVaorI-IPdHjCtwXXe7Nu-l1JfUY4E"'
-
-  //       }
-  //   })
-  //     .then(response => response.json())
-  //     .then(data => {
-
-  //       data.forEach(item => setproductsData(prevState => ([
-  //         ...prevState,
-  //         {data: data.filter(d => d.id === "BTCAUD")},
-  //         {data: data.filter(d => d.id === "ETHAUD")},
-  //         {data: data.filter(d => d.id === "XRPAUD")},
-  //         {data: data.filter(d => d.id === "LINK-AUD")}
-  //        ])));
-
-  //     })
-  //     .catch(err => console.error(err));
-
-  // };
-
-  // API URLs to Hit  - This is just a hardcoding to get the funcationality working.
+  // API URLs to Hit 
   let apiurl1 = "https://data.exchange.coinjar.com/products/BTCAUD/ticker";
   let apiurl2 = "https://data.exchange.coinjar.com/products/ETHAUD/ticker";
   let apiurl3 = "https://data.exchange.coinjar.com/products/XRPAUD/ticker";
@@ -118,7 +86,7 @@ const HomeUI = ({ navigation }: { navigation: any }) => {
         <Text style={Containerstyles.sectionHeader}>Current Market Prices</Text>
       </View>
 
-      {fp?.map((item, i) => (
+      {fp?.map((item:any, i:any) => (
         <React.Fragment key={i}>
           <TouchableOpacity
             key={i}

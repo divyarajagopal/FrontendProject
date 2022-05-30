@@ -57,7 +57,7 @@ const TradesPage = ( {route}: {route: any} ) => {
       </View>
 
       <ScrollView>
-        {fp?.map((item, i) => (
+        {fp?.map((item:any, i:any) => (
           // <>
           <React.Fragment key={i}>
             <TouchableOpacity
